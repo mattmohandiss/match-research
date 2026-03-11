@@ -5,75 +5,47 @@ export default function AboutPage() {
         <h1 className="text-4xl font-bold mb-8">About Match_Research</h1>
 
         <div className="prose prose-neutral dark:prose-invert max-w-none">
-          <p className="text-lg text-muted-foreground mb-8">
-            Match_Research is a role-based research platform designed to connect
-            researchers, institutions, students, and community members to advance
-            knowledge together.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-12 mb-4">Our Mission</h2>
+          <h2 className="text-2xl font-semibold mt-12 mb-4">WHAT WE DO</h2>
+          <h3 className="text-xl font-medium mb-4">CONNECTING STUDENTS, RESEARCHERS, INNOVATORS, AND CITIZENS</h3>
           <p className="text-muted-foreground mb-6">
-            We believe that great research happens when the right people connect.
-            Our platform makes it easy for researchers to find participants,
-            students to find collaborators, and communities to contribute to
-            meaningful studies.
+            We work for the digitalization of research facilities, connecting researchers and communities. Through our
+            platform, researchers are enabled to widen their scope of investigation with enhanced access and verified data
+            collection. Citizens can contribute their input in relevant studies while earning rewards for their time investment.
+            Researchers and innovators can get peer support, share research ideas, upload multisectoral, survey-based
+            questions, collect screened data, take interviews, and even open calls for physical samples.
           </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-4">What We Offer</h2>
-          <div className="grid md:grid-cols-2 gap-6 my-8">
-            <div className="p-6 bg-muted/50 rounded-lg">
-              <h3 className="font-semibold mb-2">For Researchers</h3>
-              <p className="text-sm text-muted-foreground">
-                Create studies, recruit participants with specific criteria, and
-                manage your research workflow all in one place.
-              </p>
-            </div>
-            <div className="p-6 bg-muted/50 rounded-lg">
-              <h3 className="font-semibold mb-2">For Students</h3>
-              <p className="text-sm text-muted-foreground">
-                Find thesis partners, connect with mentors, and collaborate with
-                peers who share your research interests.
-              </p>
-            </div>
-            <div className="p-6 bg-muted/50 rounded-lg">
-              <h3 className="font-semibold mb-2">For Participants</h3>
-              <p className="text-sm text-muted-foreground">
-                Discover studies that match your profile, participate securely,
-                and receive fair compensation for your time.
-              </p>
-            </div>
-            <div className="p-6 bg-muted/50 rounded-lg">
-              <h3 className="font-semibold mb-2">For Institutions</h3>
-              <p className="text-sm text-muted-foreground">
-                Support your researchers with a platform that handles recruitment,
-                compliance, and collaboration needs.
-              </p>
-            </div>
-          </div>
+          <h2 className="text-2xl font-semibold mt-12 mb-4">MISSION</h2>
+          <h3 className="text-xl font-medium mb-4">The Goal is to amplify accessibility and collaboration for inclusive knowledge.</h3>
+          <p className="text-muted-foreground mb-6">
+            Our mission is to unlock collaboration potentials to make research and innovation accessible: connecting people
+            and real-world purpose. We facilitate active participation of citizens in scientific studies as well as co-create
+            connections among researchers and innovators for high-quality research.
+          </p>
 
-          <h2 className="text-2xl font-semibold mt-12 mb-4">Our Values</h2>
-          <ul className="space-y-4 text-muted-foreground">
-            <li>
-              <strong className="text-foreground">Privacy First:</strong> We
-              protect participant data with robust security measures and give
-              users control over their information.
-            </li>
-            <li>
-              <strong className="text-foreground">Research Ethics:</strong> All
-              studies go through a moderation process to ensure they meet
-              ethical standards.
-            </li>
-            <li>
-              <strong className="text-foreground">Fair Compensation:</strong> We
-              advocate for fair pay for research participants and transparent
-              compensation structures.
-            </li>
-            <li>
-              <strong className="text-foreground">Accessibility:</strong> We're
-              committed to making research opportunities available to everyone,
-              regardless of background.
-            </li>
-          </ul>
+          <h2 className="text-2xl font-semibold mt-12 mb-4">WHY DO WE MATTER?</h2>
+          <h3 className="text-xl font-medium mb-4">TO UNLOCK COLLABORATION POTENTIALS TO AMPLIFY INCLUSIVITY IN RESEARCH & INNOVATION</h3>
+          <p className="text-muted-foreground mb-4">
+            Human insights are built on cumulative knowledge production. Science, society, and technology, in the need of
+            greater benefit, thrive when they capture diverse, local voices and lived experiences. Bigger impacts need
+            collaborative approaches.
+          </p>
+          <p className="text-muted-foreground mb-4">
+            In many parts of the world, students, grassroots startups, innovators, researchers, and end users often operate
+            within isolated ecosystems of knowledge production. Valuable ideas and knowledge often remain disconnected,
+            limiting their impact.
+          </p>
+          <p className="text-muted-foreground mb-4">
+            We are building a functional, stakeholder-centered network that bridges these divides. Our goal is to support
+            meaningful collaboration and accelerate development through shared knowledge and direct engagement.
+          </p>
+          <p className="text-muted-foreground mb-6">
+            Traditional data collection can be time-consuming, labor-intensive, and sometimes unreliable. It may also place a
+            risk of exploitation of participant time, giving them no return. In today's digital era, we have the tools to do better.
+            By enabling direct, transparent, and structured connections and accelerating faster and large-scale data
+            harvesting, we accelerate development through connected knowledge production—making research more
+            inclusive, efficient, and impactful.
+          </p>
 
           <h2 className="text-2xl font-semibold mt-12 mb-4">Contact Us</h2>
           <p className="text-muted-foreground">

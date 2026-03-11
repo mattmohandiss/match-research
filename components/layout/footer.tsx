@@ -11,7 +11,7 @@ export function Footer() {
               <span>Match_Research</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              Connecting researchers, students, and participants to advance knowledge together.
+							The Goal is to amplify accessibility and collaboration for inclusive knowledge.
             </p>
           </div>
 
@@ -25,14 +25,19 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/buddies" className="hover:text-foreground transition-colors">
-                  Research Buddies
+                  Find Buddies
                 </Link>
               </li>
               <li>
-                <Link href="/join" className="hover:text-foreground transition-colors">
-                  Join the Community
+                <Link href="/" className="hover:text-foreground transition-colors">
+                  Browse Event Calendar
                 </Link>
               </li>
+							<li>
+								<Link href="/" className="hover:text-foreground transition-colors">
+									Articles
+								</Link>
+							</li>							
             </ul>
           </div>
 
@@ -54,27 +59,37 @@ export function Footer() {
                   Terms of Service
                 </Link>
               </li>
+							<li>
+								<Link href="/" className="hover:text-foreground transition-colors">
+									Cookie Policy
+								</Link>
+							</li>							
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Get Started</h3>
+            <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/join/facilitator" className="hover:text-foreground transition-colors">
-                  For Researchers
+                <Link href="/" className="hover:text-foreground transition-colors">
+                  Contact Information
                 </Link>
               </li>
               <li>
-                <Link href="/join/buddy" className="hover:text-foreground transition-colors">
-                  For Students
+                <Link href="/" className="hover:text-foreground transition-colors">
+                  Partner with us
                 </Link>
               </li>
               <li>
-                <Link href="/join/participant" className="hover:text-foreground transition-colors">
-                  For Participants
+                <Link href="/" className="hover:text-foreground transition-colors">
+                  Jobs Openings
                 </Link>
               </li>
+							<li>
+								<Link href="/" className="hover:text-foreground transition-colors">
+									FAQ and Help Center
+								</Link>
+							</li>							
             </ul>
           </div>
         </div>
