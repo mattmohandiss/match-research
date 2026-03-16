@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getApprovedStudies } from "@/lib/actions/studies";
 import { createClient } from "@/lib/supabase/server";
 import { Button } from "@/components/ui/button";
-import { StudyCard } from "@/components/studies/study-card";
+import { StudiesTable } from "@/components/studies/studies-table";
 
 export default async function StudiesPage() {
   const studies = await getApprovedStudies();
@@ -18,7 +18,7 @@ export default async function StudiesPage() {
           <div>
             <h1 className="text-3xl font-bold">Research Studies</h1>
             <p className="text-muted-foreground mt-1">
-              Discover research opportunities and contribute to advancing knowledge
+							Find and participate in a compatible study; contribute to scientific studies to make it impactful. Earn compensation for your time. 
             </p>
           </div>
           {user && (
@@ -46,11 +46,7 @@ export default async function StudiesPage() {
             )}
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {studies.map((study) => (
-              <StudyCard key={study.id} study={study} />
-            ))}
-          </div>
+          <StudiesTable studies={studies} />
         )}
       </div>
     </div>
