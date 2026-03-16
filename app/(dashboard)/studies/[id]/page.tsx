@@ -83,6 +83,27 @@ export default async function StudyDetailPage({
               </p>
             </div>
 
+            {/* Role & Impact */}
+            {(study.participant_role || study.research_impact) && (
+              <>
+                <Separator />
+                <div className="space-y-4">
+                  {study.participant_role && (
+                    <div>
+                      <h3 className="font-semibold mb-1">Participant Role</h3>
+                      <p className="text-muted-foreground">{study.participant_role}</p>
+                    </div>
+                  )}
+                  {study.research_impact && (
+                    <div>
+                      <h3 className="font-semibold mb-1">Research Impact</h3>
+                      <p className="text-muted-foreground">{study.research_impact}</p>
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
+
             {/* Participant Criteria */}
             {(study.participant_age_min ||
               study.participant_age_max ||
@@ -145,6 +166,21 @@ export default async function StudyDetailPage({
                     <p className="text-lg font-semibold">
                       {study.duration_minutes} minutes
                     </p>
+                  </div>
+                )}
+                {study.survey_link && (
+                  <div>
+                    <p className="text-sm text-muted-foreground">Survey / Meeting Link</p>
+                    <a
+                      href={study.survey_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline break-all"
+                    >
+                      {study.survey_link.length > 40
+                        ? study.survey_link.substring(0, 40) + "..."
+                        : study.survey_link}
+                    </a>
                   </div>
                 )}
                 <div>

@@ -63,6 +63,9 @@ export interface Study {
   keywords: string[] | null;
   payment_bdt: number | null;
   duration_minutes: number | null;
+  participant_role: string | null;
+  research_impact: string | null;
+  survey_link: string | null;
   participant_age_min: number | null;
   participant_age_max: number | null;
   participant_gender: string | null;
@@ -133,6 +136,9 @@ export interface CreateStudyData {
   keywords?: string[];
   payment_bdt?: number;
   duration_minutes?: number;
+  participant_role?: string;
+  research_impact?: string;
+  survey_link?: string;
   participant_age_min?: number;
   participant_age_max?: number;
   participant_gender?: string;

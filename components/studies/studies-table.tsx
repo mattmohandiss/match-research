@@ -46,12 +46,12 @@ export function StudiesTable({ studies, itemsPerPage = 10 }: StudiesTableProps) 
           <TableHeader>
             <TableRow className="bg-muted/50">
               <TableHead className="font-semibold">Study Name</TableHead>
-              {/* TODO: Add "Role" column when field is added to schema */}
+              <TableHead className="font-semibold">Role</TableHead>
               <TableHead className="font-semibold">Study Information, Procedure</TableHead>
-              {/* TODO: Add "Research Impact" column when field is added to schema */}
+              <TableHead className="font-semibold">Research Impact</TableHead>
               <TableHead className="font-semibold">Time Commitment</TableHead>
               <TableHead className="font-semibold">Compensation in BDT</TableHead>
-              {/* TODO: Add "Survey Link/Zoom Meeting Schedule" column when field is added to schema */}
+              <TableHead className="font-semibold">Survey Link / Meeting Schedule</TableHead>
               <TableHead className="font-semibold">Keywords</TableHead>
             </TableRow>
           </TableHeader>
@@ -69,7 +69,11 @@ export function StudiesTable({ studies, itemsPerPage = 10 }: StudiesTableProps) 
                     {study.title}
                   </Link>
                 </TableCell>
-                {/* TODO: Add Role cell when field is added to schema */}
+                <TableCell>
+                  <Link href={`/studies/${study.id}`} className="block">
+                    {study.participant_role || "—"}
+                  </Link>
+                </TableCell>
                 <TableCell className="max-w-[300px]">
                   <Link
                     href={`/studies/${study.id}`}
@@ -78,7 +82,14 @@ export function StudiesTable({ studies, itemsPerPage = 10 }: StudiesTableProps) 
                     {study.description}
                   </Link>
                 </TableCell>
-                {/* TODO: Add Research Impact cell when field is added to schema */}
+                <TableCell className="max-w-[200px]">
+                  <Link
+                    href={`/studies/${study.id}`}
+                    className="block text-muted-foreground line-clamp-2"
+                  >
+                    {study.research_impact || "—"}
+                  </Link>
+                </TableCell>
                 <TableCell>
                   <Link href={`/studies/${study.id}`} className="block">
                     {study.duration_minutes
@@ -93,7 +104,21 @@ export function StudiesTable({ studies, itemsPerPage = 10 }: StudiesTableProps) 
                       : "—"}
                   </Link>
                 </TableCell>
-                {/* TODO: Add Survey Link/Meeting Schedule cell when field is added to schema */}
+                <TableCell>
+                  {study.survey_link ? (
+                    <a
+                      href={study.survey_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Link
+                    </a>
+                  ) : (
+                    "—"
+                  )}
+                </TableCell>
                 <TableCell className="max-w-[200px]">
                   <Link href={`/studies/${study.id}`} className="block">
                     {study.keywords && study.keywords.length > 0 ? (

@@ -68,6 +68,9 @@ export function StudyForm() {
       duration_minutes: formData.get("duration_minutes")
         ? parseInt(formData.get("duration_minutes") as string)
         : undefined,
+      participant_role: (formData.get("participant_role") as string) || undefined,
+      research_impact: (formData.get("research_impact") as string) || undefined,
+      survey_link: (formData.get("survey_link") as string) || undefined,
       participant_age_min: formData.get("participant_age_min")
         ? parseInt(formData.get("participant_age_min") as string)
         : undefined,
@@ -165,6 +168,32 @@ export function StudyForm() {
               </div>
             )}
           </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="participant_role">Participant Role</Label>
+            <Input
+              id="participant_role"
+              name="participant_role"
+              placeholder="e.g., Survey Participant, Data Collector, Interviewer"
+              disabled={isLoading}
+            />
+            <p className="text-xs text-muted-foreground">
+              What role will participants play in this study?
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="research_impact">Research Impact</Label>
+            <Input
+              id="research_impact"
+              name="research_impact"
+              placeholder="e.g., Understanding dietary effects on health outcomes"
+              disabled={isLoading}
+            />
+            <p className="text-xs text-muted-foreground">
+              Briefly describe the expected impact of this research
+            </p>
+          </div>
         </CardContent>
       </Card>
 
@@ -204,6 +233,20 @@ export function StudyForm() {
                 disabled={isLoading}
               />
             </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="survey_link">Survey Link / Meeting Schedule</Label>
+            <Input
+              id="survey_link"
+              name="survey_link"
+              type="url"
+              placeholder="e.g., https://forms.google.com/... or https://zoom.us/..."
+              disabled={isLoading}
+            />
+            <p className="text-xs text-muted-foreground">
+              Link to your survey form or Zoom meeting schedule
+            </p>
           </div>
         </CardContent>
       </Card>
